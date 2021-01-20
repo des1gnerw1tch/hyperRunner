@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
   public float jumpPower;
   private bool touchingGround;
   [SerializeField] private Rigidbody2D rb;
+  [SerializeField] private Animator animator;
 
   void Update()
   {
@@ -17,12 +18,12 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-    if (Input.touchCount > 0) {
+    /*if (Input.touchCount > 0) {
       Touch touch = Input.GetTouch(0);
       if (touch.phase == TouchPhase.Began && touchingGround)  {
         Jump();
       }
-    }
+    }*/
 
   }
 
@@ -35,12 +36,14 @@ public class PlayerMovement : MonoBehaviour
     if (other.gameObject.CompareTag("Ground")) {
       touchingGround = true;
       Debug.Log("Touched the ground");
+      animator.SetBool("jumping", false);
     }
   }
 
   void OnCollisionExit2D(Collision2D other) {
     if (other.gameObject.CompareTag("Ground")) {
       touchingGround = false;
+      animator.SetBool("jumping", true);
     }
   }
 
