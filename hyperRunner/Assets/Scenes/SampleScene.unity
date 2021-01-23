@@ -666,6 +666,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: jump1
+    clip: {fileID: 8300000, guid: 2f3d9074a5c5a4b5eb9211f1779227c9, type: 3}
+    volume: 0.315
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: jump2
+    clip: {fileID: 8300000, guid: 2f3d9074a5c5a4b5eb9211f1779227c9, type: 3}
+    volume: 0.311
+    pitch: 1.38
+    loop: 0
+    source: {fileID: 0}
+  - name: landing
+    clip: {fileID: 8300000, guid: 2f029337a35014e45ad76c3b67d03d05, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &770242456
 GameObject:
   m_ObjectHideFlags: 0

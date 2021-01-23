@@ -9,9 +9,14 @@ public class PlayerMovement : MonoBehaviour
 
   private bool touchingGround;
   private int jumpsLeft;
+
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private Animator animator;
+  private AudioManager audio;
 
+  void Start()  {
+    audio = FindObjectOfType<AudioManager>();
+  }
   void Update()
   {
     transform.position = new Vector3 (transform.position.x + speed*Time.deltaTime, transform.position.y, transform.position.z);
@@ -39,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
     //this will double jump, happens when jumping and not touching ground
     if (!touchingGround)  {
       animator.SetTrigger("doubleJump");
+      audio.Play("jump2");
+    } else {
+      audio.Play("jump1");
     }
 
   }
@@ -49,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
       jumpsLeft = 2;
       Debug.Log("Touched the ground");
       animator.SetBool("jumping", false);
+      audio.Play("landing");
     }
   }
 
