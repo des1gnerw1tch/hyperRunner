@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
   private bool touchingGround;
   private int jumpsLeft;
+  private float initialGravity;
 
   [SerializeField] private Rigidbody2D rb;
   [SerializeField] private Animator animator;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
   void Start()  {
     audio = FindObjectOfType<AudioManager>();
+    initialGravity = rb.gravityScale;
   }
   void Update()
   {
@@ -32,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
         Jump();
       }
     }*/
+
+    //this will ground the player when holding s
+    if (Input.GetKey("s"))  {
+      rb.gravityScale = 20;
+    } else {
+      rb.gravityScale = initialGravity;
+    }
 
   }
 
