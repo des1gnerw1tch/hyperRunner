@@ -2845,3 +2845,31 @@ System memory in use after: 244.5 MB.
 Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3720.
 Total: 4.055078 ms (FindLiveObjects: 0.320783 ms CreateObjectMapping: 0.125384 ms MarkObjects: 1.885515 ms  DeleteObjects: 1.722544 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004153 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.149 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2850 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 247.2 MB.
+System memory in use after: 244.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3723.
+Total: 4.278413 ms (FindLiveObjects: 0.344619 ms CreateObjectMapping: 0.132539 ms MarkObjects: 2.019140 ms  DeleteObjects: 1.781206 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
