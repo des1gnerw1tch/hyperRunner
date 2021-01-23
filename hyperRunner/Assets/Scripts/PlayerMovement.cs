@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+//for mobile players
 
     /*if (Input.touchCount > 0) {
       Touch touch = Input.GetTouch(0);
@@ -30,9 +31,16 @@ public class PlayerMovement : MonoBehaviour
   }
 
   void Jump() {
+    rb.velocity =  new Vector2(rb.velocity.x, 0);;
     rb.AddForce(transform.up * jumpPower, ForceMode2D.Impulse);
     jumpsLeft-= 1;
     Debug.Log("Jumped");
+
+    //this will double jump, happens when jumping and not touching ground
+    if (!touchingGround)  {
+      animator.SetTrigger("doubleJump");
+    }
+
   }
 
   void OnCollisionEnter2D(Collision2D other)  {
